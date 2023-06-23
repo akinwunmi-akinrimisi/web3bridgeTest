@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Room Allocation</title>
+</head>
+<body>
+  <h1>Room Allocation</h1>
+  
+  <form id="allocationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    
+    <label for="status">Status:</label>
+    <select id="status" required>
+      <option value="facilitator">Facilitator</option>
+      <option value="developer">Developer</option>
+    </select>
+    
+    <div id="developerOptions" style="display: none;">
+      <label for="proficiency">Proficiency:</label>
+      <select id="proficiency" required>
+        <option value="smart-contract">Smart Contract Development</option>
+        <option value="front-end">Front End Technologies</option>
+        <option value="server-side">Server Side Architecture</option>
+      </select>
+    </div>
+    
+    <button type="submit">Allocate Room</button>
+  </form>
+
+  <div id="allocationTable">
+    <h2>Allocation Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Room Number</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Proficiency</th>
+        </tr>
+      </thead>
+      <tbody id="allocationRows">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
